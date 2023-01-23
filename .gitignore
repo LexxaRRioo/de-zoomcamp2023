@@ -1,0 +1,4 @@
+week1/ny_taxi_postgres_data
+week1/homework/ny_taxi_postgres_data
+*.csv
+*.tfstate
