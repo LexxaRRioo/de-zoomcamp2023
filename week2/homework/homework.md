@@ -6,7 +6,8 @@ The goal of this homework is to familiarise users with workflow orchestration an
 Q1: 447,770
 Q2: `0 5 1 * *`
 Q3: 14,851,920
-Q4: 
+Q4: 88,605
+Q5: 
 
 files from prefect repo could be changed implicitly before copying
 
@@ -121,6 +122,7 @@ python ~/git/de-zoomcamp2023/week2/homework/blocks/create_github_block.py
 cd ~/git/de-zoomcamp2023/
 prefect deployment build week2/homework/etl_web_to_gcs.py:etl_web_to_gcs --name Q4_pipe --apply -sb github/dev
 # ran from GUI to stay lazy
+# in logs: 88605
 ```
 
 ## Question 5. Email or Slack notifications
@@ -151,6 +153,11 @@ How many rows were processed by the script?
 - `728,390`
 - `514,392`
 
+## code
+```bash
+# I came up with a thought that if I invested time to parametrize pipeline it would save me))
+
+```
 
 ## Question 6. Secrets
 
