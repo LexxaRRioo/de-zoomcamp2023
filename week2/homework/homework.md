@@ -7,7 +7,8 @@ Q1: 447,770
 Q2: `0 5 1 * *`
 Q3: 14,851,920
 Q4: 88,605
-Q5: 
+Q5: `514,392`
+Q6: 10
 
 files from prefect repo could be changed implicitly before copying
 
@@ -156,7 +157,11 @@ How many rows were processed by the script?
 ## code
 ```bash
 # I came up with a thought that if I invested time to parametrize pipeline it would save me))
-
+# created acc in app.prefect.cloud
+prefect cloud login -k pnu_T124gpgkPgFjvZtkms.....
+prefect cloud workspace set --workspace "lexxarrioogmailcom/test" 
+# it won't pull all my work from local so I gave up and ran it as usual
+# `514,392`
 ```
 
 ## Question 6. Secrets
@@ -168,6 +173,8 @@ Prefect Secret blocks provide secure, encrypted storage in the database and obfu
 - 8
 - 10
 
+## code
+based on https://docs.prefect.io/concepts/blocks/ it's 10 asterisks for any secret
 
 ## Submitting the solutions
 
