@@ -29,10 +29,10 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
 @task()
 def write_local(df: pd.DataFrame, color: str, dataset_file: str) -> Path:
     """Write DataFrame out locally as parquet file"""
-    path = Path(f"~/git/de-zoomcamp2023/week2/homework/{color}/{dataset_file}.parquet")
+    path = Path(f"/home/AlexRaz/git/de-zoomcamp2023/week2/homework/{color}/{dataset_file}.parquet")
     df.to_parquet(path, compression="gzip")
     return path
-
+    
 
 @task()
 def write_gcs(path: Path) -> None:
