@@ -108,13 +108,19 @@ How many rows were processed by the script?
 ```bash
 mkdir blocks
 code blocks/create_github_repo_block.py
-# in this .py:
+# inside:
+# from prefect.filesystems import GitHub
 
-# added to requirements.txt `prefect-github` and install this module
-cp ~/git/prefect-zoomcamp/requirements.txt  .
-pip install -r requirements.txt
-prefect block register -m prefect_github
+# block = GitHub(
+#     repository="https://github.com/LexxaRRioo/de-zoomcamp2023",
 
+# )
+# block.get_directory("week2/homework") # specify a subfolder of repo
+# block.save("dev")
+python ~/git/de-zoomcamp2023/week2/homework/blocks/create_github_block.py
+cd ~/git/de-zoomcamp2023/
+prefect deployment build week2/homework/etl_web_to_gcs.py:etl_web_to_gcs --name Q4_pipe --apply -sb github/dev
+# ran from GUI to stay lazy
 ```
 
 ## Question 5. Email or Slack notifications
