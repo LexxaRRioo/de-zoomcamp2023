@@ -8,6 +8,8 @@ Q2: `0 5 1 * *`
 Q3: 14,851,920
 Q4: 
 
+files from prefect repo could be changed implicitly before copying
+
 
 
 ## Question 1. Load January 2020 data
@@ -107,6 +109,12 @@ How many rows were processed by the script?
 mkdir blocks
 code blocks/create_github_repo_block.py
 # in this .py:
+
+# added to requirements.txt `prefect-github` and install this module
+cp ~/git/prefect-zoomcamp/requirements.txt  .
+pip install -r requirements.txt
+prefect block register -m prefect_github
+
 ```
 
 ## Question 5. Email or Slack notifications
