@@ -3,3 +3,5 @@ week1/homework/ny_taxi_postgres_data
 *.csv*
 *.tfstate
 *.parquet
+
+!week4/seeds/taxi_zone_lookup.csv
